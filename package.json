@@ -3,11 +3,12 @@
   "license": "MIT",
   "version": "0.0.1",
   "dependencies": {
-    "express": "4.x",
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1",
     "underscore": "^1.12.1"
   },
   "scripts": {
-    "test": "nyc --reporter=html mocha --exit",
+    "test": "node test/api.test.js",
     "start": "node app.js"
   },
   "devDependencies": {
