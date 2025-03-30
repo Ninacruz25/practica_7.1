@@ -1,15 +1,15 @@
-FROM node:14
+FROM node:18-alphine
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install app dependencies
-COPY package.json yarn.lock ./
-RUN yarn install
+COPY package*.json ./
+RUN npm install
 
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
+EXPOSE 3000
 
 CMD [ "node", "app.js" ]
